@@ -51,7 +51,7 @@ def f(x):
     if x % 2 == 0:
         var =-1
     else:
-        var =0
+        var = 0
         
     print(x,var)
     return var
@@ -61,5 +61,5 @@ ys = []
 for x in xs:
     ys.append(f(x))
 
-pyplot.plot(xs, ys)
+pyplot.bar(xs, ys)
 pyplot.savefig('ex4.png')
