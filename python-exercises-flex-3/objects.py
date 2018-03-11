@@ -36,9 +36,12 @@ Jordan = Person("Jordan", "jordan@aol.com","495-586-3456")
 #3
 Sonny.greet(Jordan)
 #4
+Bob = Person("Bob","bob@bob.com","483-485-4948")
+
 Jordan.greet(Sonny)
 Jordan.greet(Sonny)
 Jordan.greet(Sonny)
+Jordan.greet(Bob)
 print(Jordan.greeting_count)
 #5
 print(Sonny.email)
