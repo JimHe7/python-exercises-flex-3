@@ -46,17 +46,21 @@ def letter_histogram(text):
   letter_count_list = []
   for l in text:
     count = 0
-    if l not in uniq_letter:
+    if l not in uniq_letter_list:
       uniq_letter_list.append(l)
       for k in text:
         if k == l:
           count += 1
         else:
           pass
-      letter_count_list.append(count-1)
-      
+      letter_count_list.append(count)
     else:
       pass
-    
+  
+  dictionary = dict(zip(uniq_letter_list,letter_count_list))
+  
+  print(dictionary)
+  
+  
 phrase = input("Phrase?")
 letter_histogram(phrase)
