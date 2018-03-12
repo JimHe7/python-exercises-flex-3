@@ -13,7 +13,6 @@ del phonebook_dict['Alice']
 phonebook_dict['Bob']='968-345-2345'
 print(phonebook_dict)
 
-"""
 #EX2
 
 ramit = {
@@ -34,18 +33,30 @@ ramit = {
   ]
 }
 
-#print(ramit['email'])
-#print(ramit['interests'][1])
-print(ramit['friends'][1])
+print(ramit['email'])
+print(ramit['interests'][1])
+print(ramit['friends'][1]['email'])
+print(ramit['friends'][0]['interests'][1])
 
-#for value in ramit['friends']:
-#    print(value)
+"""
 
-{
-    "Jim": "789",
-    "Paul": "567"
-}
 
-{
-    "Jim": {"phone": "", "email": "", "web": }
-}
+def letter_histogram(text):
+  uniq_letter_list = []
+  letter_count_list = []
+  for l in text:
+    count = 0
+    if l not in uniq_letter:
+      uniq_letter_list.append(l)
+      for k in text:
+        if k == l:
+          count += 1
+        else:
+          pass
+      letter_count_list.append(count-1)
+      
+    else:
+      pass
+    
+phrase = input("Phrase?")
+letter_histogram(phrase)
