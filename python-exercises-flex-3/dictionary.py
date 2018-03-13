@@ -38,6 +38,9 @@ print(ramit['interests'][1])
 print(ramit['friends'][1]['email'])
 print(ramit['friends'][0]['interests'][1])
 
+#Letter Summary  
+
+
 def letter_histogram(text):
   uniq_letter_list = []
   letter_count_list = []
@@ -64,6 +67,8 @@ letter_histogram(phrase)
 
 """
 
+#Word Summary 
+
 #use split to turn string into list of words
 
 def word_histogram(text):
@@ -81,6 +86,37 @@ def word_histogram(text):
       word_count_list.append(count)
     else:
       pass
+  
+  dictionary = dict(zip(uniq_word_list,word_count_list))
+  
+  print(dictionary)
+
+
+
+phrase = input("Phrase?")
+chunk = phrase.split(" ")
+word_histogram(chunk)
+
+#BONUS
+def word_histogram(text):
+  uniq_word_list = []
+  word_count_list = []
+  for l in text:
+    count = 0
+    if l not in uniq_word_list:
+      uniq_word_list.append(l)
+      for k in text:
+        if k == l:
+          count += 1
+        else:
+          pass
+      word_count_list.append(count)
+    else:
+      pass
+  
+  
+  
+  
   
   dictionary = dict(zip(uniq_word_list,word_count_list))
   
