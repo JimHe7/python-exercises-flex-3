@@ -1,4 +1,4 @@
-"""
+
 #EX1
 
 phonebook_dict = {
@@ -97,7 +97,6 @@ phrase = input("Phrase?")
 chunk = phrase.split(" ")
 word_histogram(chunk)
 
-"""
 
 #BONUS
 def word_histogram(text):
@@ -121,12 +120,13 @@ def word_histogram(text):
   
   print(dictionary)
 
-def max_words(phrase):
-  dictionary = word_histogram(phrase)
-  keys = dictionary.keys()
-  values = dictionary.values()
+def max_words(words):
+  dictionary = word_histogram(words)
+  keys = list(dictionary.keys())
+  values = list(dictionary.values())
   top = []
-  for i in range (0, 2):
+  
+  for i in range (0, 3):
     maxindex = values.index(max(values))
     top.append(keys[maxindex])
     del values[maxindex]
