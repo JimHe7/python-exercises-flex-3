@@ -65,7 +65,7 @@ def letter_histogram(text):
 phrase = input("Phrase?")
 letter_histogram(phrase)
 
-"""
+
 
 #Word Summary 
 
@@ -97,6 +97,8 @@ phrase = input("Phrase?")
 chunk = phrase.split(" ")
 word_histogram(chunk)
 
+"""
+
 #BONUS
 def word_histogram(text):
   uniq_word_list = []
@@ -113,17 +115,26 @@ def word_histogram(text):
       word_count_list.append(count)
     else:
       pass
-  
-  
-  
-  
-  
+    
   dictionary = dict(zip(uniq_word_list,word_count_list))
+  return(dictionary)
   
   print(dictionary)
 
-
+def max_words(phrase):
+  dictionary = word_histogram(phrase)
+  keys = dictionary.keys()
+  values = dictionary.values()
+  top = []
+  for i in range (0, 2):
+    maxindex = values.index(max(values))
+    top.append(keys[maxindex])
+    del values[maxindex]
+    del keys[maxindex]
+    
+  print(top)
 
 phrase = input("Phrase?")
 chunk = phrase.split(" ")
-word_histogram(chunk)
+max_words(chunk)
+
